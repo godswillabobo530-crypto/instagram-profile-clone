@@ -10,34 +10,70 @@
 </head>
 
 <body>
-    <header>
-        <div class="profile-header">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="profile-info">
-                <h2 class="username">Will's Tech</h2>
-                <button class="follow-btn">Follow</button>
-                <p class="bio">Code is poetry✨</p>
-                <div class="stats">
-                    <span><strong id="posts-count">6</strong> posts</span>
-                    <span><strong id="followers-count">350</strong> followers</span>
-                    <span><strong id="following-count">150</strong> following</span>
-                </div>
-            </div>
-        </div>
-    </header>
+    <main class="page-wrap">
+        <div class="container">
+            <section class="profile-card">
+                <div class="card-inner">
+                    <div class="profile-top">
+                        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                        <div class="profile-head-info">
+                            <h2 class="username">Will's Tech</h2>
 
-    <main class="post-grid">
-        <div class="post"><img src="https://picsum.photos/800/800?random=1" alt="Post 1"></div>
-        <div class="post"><img src="https://picsum.photos/800/800?random=2" alt="Post 2"></div>
-        <div class="post"><img src="https://picsum.photos/800/800?random=3" alt="Post 3"></div>
-        <div class="post"><img src="https://picsum.photos/800/800?random=4" alt="Post 4"></div>
-        <div class="post"><img src="https://picsum.photos/800/800?random=5" alt="Post 5"></div>
-        <div class="post"><img src="https://picsum.photos/800/800?random=6" alt="Post 6"></div>
+                            <div class="stats">
+                                <div class="stat">
+                                    <strong id="posts-count">6</strong>
+                                    <span class="stat-label">posts</span>
+                                </div>
+                                <div class="stat">
+                                    <strong id="followers-count">350</strong>
+                                    <span class="stat-label">followers</span>
+                                </div>
+                                <div class="stat">
+                                    <strong id="following-count">150</strong>
+                                    <span class="stat-label">following</span>
+                                </div>
+                            </div>
+
+                            <p class="bio">Code is poetry✨</p>
+
+                            <div class="action-buttons">
+                                <button class="follow-btn">Follow</button>
+                                <button class="message-btn">Message</button>
+                                <button class="more-btn">⋯</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-grid">
+                        <div class="post"><img src="https://picsum.photos/800/800?random=1" alt="Post 1"></div>
+                        <div class="post"><img src="https://picsum.photos/800/800?random=2" alt="Post 2"></div>
+                        <div class="post"><img src="https://picsum.photos/800/800?random=3" alt="Post 3"></div>
+                        <div class="post"><img src="https://picsum.photos/800/800?random=4" alt="Post 4"></div>
+                        <div class="post"><img src="https://picsum.photos/800/800?random=5" alt="Post 5"></div>
+                        <div class="post"><img src="https://picsum.photos/800/800?random=6" alt="Post 6"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <div id="modal" class="modal">
         <span id="close">&times;</span>
         <img id="modal-img" alt="Expanded post">
+    </div>
+
+    <div id="message-modal" class="message-modal">
+        <div class="message-modal-content">
+            <div class="message-header">
+                <h3>Send Message</h3>
+                <span id="message-close" class="close">&times;</span>
+            </div>
+            <textarea id="message-text" placeholder="Write a message..."></textarea>
+            <div class="message-actions">
+                <button id="message-send" class="send-btn">Send</button>
+            </div>
+        </div>
     </div>
 
     <button id="floating-follow" class="follow-btn floating-follow">Follow</button>
