@@ -57,4 +57,39 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // Message modal handlers
+    const messageBtn = document.querySelector(".message-btn");
+    const messageModal = document.getElementById("message-modal");
+    const messageClose = document.getElementById("message-close");
+    const messageSend = document.getElementById("message-send");
+    const messageText = document.getElementById("message-text");
+
+    if (messageBtn && messageModal) {
+        messageBtn.addEventListener("click", () => {
+            messageModal.style.display = "flex";
+            if (messageText) messageText.focus();
+        });
+    }
+
+    if (messageClose) {
+        messageClose.addEventListener("click", () => {
+            if (messageModal) messageModal.style.display = "none";
+        });
+    }
+
+    if (messageSend) {
+        messageSend.addEventListener("click", () => {
+            const text = messageText ? messageText.value.trim() : "";
+            if (text) console.log("Message sent:", text);
+            if (messageModal) messageModal.style.display = "none";
+            if (messageText) messageText.value = "";
+        });
+    }
+
+    if (messageModal) {
+        messageModal.addEventListener("click", (e) => {
+            if (e.target === messageModal) messageModal.style.display = "none";
+        });
+    }
 });
