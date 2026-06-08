@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Instagram Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="profile-header">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h2 class="username">Will's Tech</h2>
+                <button class="follow-btn">Follow</button>
+                <p class="bio">Code is poetry✨</p>
+                <div class="stats">
+                    <span><strong id="posts-count">6</strong> posts</span>
+                    <span><strong id="followers-count">350</strong> followers</span>
+                    <span><strong id="following-count">150</strong> following</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="post-grid">
+        <div class="post"><img src="https://picsum.photos/800/800?random=1" alt="Post 1"></div>
+        <div class="post"><img src="https://picsum.photos/800/800?random=2" alt="Post 2"></div>
+        <div class="post"><img src="https://picsum.photos/800/800?random=3" alt="Post 3"></div>
+        <div class="post"><img src="https://picsum.photos/800/800?random=4" alt="Post 4"></div>
+        <div class="post"><img src="https://picsum.photos/800/800?random=5" alt="Post 5"></div>
+        <div class="post"><img src="https://picsum.photos/800/800?random=6" alt="Post 6"></div>
+    </main>
+
+    <div id="modal" class="modal">
+        <span id="close">&times;</span>
+        <img id="modal-img" alt="Expanded post">
+    </div>
+
+    <button id="floating-follow" class="follow-btn floating-follow">Follow</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
